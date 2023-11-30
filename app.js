@@ -15,9 +15,7 @@ mongoose.connect(mongoUrl,{
 
 
 
-app.listen(5000,()=>{
-    console.log("Server Started");
-});
+
 
 app.post("/post",async(req,res)=>{
     console.log(req.body);
@@ -80,5 +78,6 @@ app.get("/Get", async (req, res) => {
       res.status(500).send({ status: "error", message: "Internal Server Error" });
     }
   });
+module.exports = app;
   
   
