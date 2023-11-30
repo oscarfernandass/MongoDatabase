@@ -17,16 +17,13 @@ mongoose.connect(mongoUrl,{
 
 
 
-app.post("/post",async(req,res)=>{
-    console.log(req.body);
-    const {data}=req.body;
-});
+
 
 require("./userDetails");
 
 const User=mongoose.model("UserInfo");
 
-app.post("/Post", async (req, res) => {
+app.post("/post", async (req, res) => {
     const {
       id,
       name,
